@@ -1,0 +1,28 @@
+<h1>People</h1>
+<p>View all people below.</p>
+
+<br />
+
+<table>
+  <thead>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Hair Color</th>
+    <th>Eye Color</th>
+    <th>Gender</th>
+    <th>Alive?</th>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><%= @person.name %></td>
+      <td><%= @person.age %></td>
+      <td><%= @person.hair_color %></td>
+      <td><%= @person.eye_color %></td>
+      <td><%= @person.gender %></td>
+      <td><%= @person.alive %></td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to 'Go Back', people_path %>

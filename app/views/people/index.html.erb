@@ -1,0 +1,22 @@
+<h1>People Page</h1>
+<p>Check out the people below or create a new person!</p>
+
+<%= link_to 'New Person', new_person_path %>
+
+<br />
+
+<table>
+  <thead>
+    <th>Name</th>
+  </thead>
+    <% @people.each do |person| %>
+      <tbody>
+        <tr>
+          <td><%= @people.name %></td>
+          <td><%= link_to 'View', person_path(person.id) %></td>
+          <td><%= link_to 'Edit', edit_person_path(person.id) %></td>
+          <td><%= link_to 'Delete', person_path(person.id), {method: :delete} %></td>
+        </tr>
+      </tbody>
+    <% end %>
+</table>
